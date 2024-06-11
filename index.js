@@ -37,16 +37,17 @@ app.post('/forgot-password', async (req, res) => {
         await user.save();
 
      
-        const transporter = nodemailer.createTransport({
-            service: 'Gmail',
+        var transporter = nodemailer.createTransport({
+            host: "sandbox.smtp.mailtrap.io",
+            port: 2525,
             auth: {
-                user: 'your.email@gmail.com',
-                pass: 'yourpassword'
+              user: "2f9315b267b535",
+              pass: "7ff40a1071e319"
             }
-        });
+          });
 
         const mailOptions = {
-            from: 'your.email@gmail.com',
+            from: 'nalaiyathiranlab@gmail.com',
             to: email,
             subject: 'Password Reset',
             text: `Click the following link to reset your password: http://localhost:3000/reset-password/${randomString}`
