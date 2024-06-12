@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://radhapriyan786:radha@forget-password-api.zpuhekg
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: '*' })); 
 
 // Route to handle forget password
 app.post('/forgot-password', async (req, res) => {
