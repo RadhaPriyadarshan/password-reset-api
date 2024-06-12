@@ -1,3 +1,6 @@
+![image](https://github.com/RadhaPriyadarshan/password-reset-api/assets/70469801/c8eb61da-a5fb-4cb7-b48b-2cd5a479dc01)
+
+
 # Password Reset Application
 
 This repository contains two parts of the Password Reset Application:
