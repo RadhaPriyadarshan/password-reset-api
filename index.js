@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
 const User = require('./models/User');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -37,14 +38,14 @@ app.post('/forgot-password', async (req, res) => {
         await user.save();
 
      
-        var transporter = nodemailer.createTransport({
-            host: "sandbox.smtp.mailtrap.io",
-            port: 2525,
+        const transporter = nodemailer.createTransport({
+            service: 'Gmail',
             auth: {
-              user: "2f9315b267b535",
-              pass: "7ff40a1071e319"
+                user: process.env.GMAIL_USER,
+                pass: process.env.GMAIL_PASS
             }
-          });
+        });
+        
 
         const mailOptions = {
             from: 'nalaiyathiranlab@gmail.com',
