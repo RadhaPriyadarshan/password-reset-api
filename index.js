@@ -51,7 +51,7 @@ app.post('/forgot-password', async (req, res) => {
             from: 'nalaiyathiranlab@gmail.com',
             to: email,
             subject: 'Password Reset',
-            text: `Click the following link to reset your password: http://localhost:3000/reset-password/${randomString}`
+            text: `Click the following link to reset your password: https://password-reset-site.netlify.app/reset-password/${randomString}`
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
