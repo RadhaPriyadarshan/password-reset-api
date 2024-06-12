@@ -1,5 +1,4 @@
-![image](https://github.com/RadhaPriyadarshan/password-reset-api/assets/70469801/c8eb61da-a5fb-4cb7-b48b-2cd5a479dc01)
-
+![image](https://github.com/RadhaPriyadarshan/password-reset-api/assets/70469801/6a111990-9836-49cd-8480-444d2e23ca97)
 
 # Password Reset Application
 
